@@ -1,0 +1,70 @@
+@font-face{
+    font-family: onePiece;
+    src: url(./font/one\ piece\ font.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: onePiece;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 20px;
+    color:white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    margin: 0;
+    opacity: 0;
+    text-shadow:  2px 2px 4px #000000;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.3s;
+}
+ 
+@media (max-width: 480px) {
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5),
+    .panel:nth-of-type(6),
+    .panel:nth-of-type(7),
+    .panel:nth-of-type(8),
+    .panel:nth-of-type(9){
+        display: none;
+    }
+}
