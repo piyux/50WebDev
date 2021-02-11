@@ -27,26 +27,28 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
-    border-radius: 20px;
+    border-radius: 10px;
     color:white;
     cursor: pointer;
     flex: 0.5;
-    margin: 10px;
+    margin: auto;
     position: relative;
-    transition: flex 0.7s ease-in;
+    transition: flex 0.2s ease-in;
 }
 
 .panel h3{
     position: absolute;
     font-size: 24px;
     top: 50%;
-    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
     text-shadow:  2px 2px 4px #000000;
 }
 
 .panel.active{
-    flex: 5;
+    flex: auto;
 }
 
 .panel.active h3{
